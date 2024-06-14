@@ -13,11 +13,13 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
+    // Returns all the tasks in the repository
     @GetMapping
     public List<Tasks> getAllTasks() {
         return taskService.getAllTasks();
     }
 
+    // Below defines CRUD uperations for the database.
     @GetMapping("/get/{id}")
     public Tasks getTakskById(@PathVariable Long id) {
         return taskService.getTaskById(id);
