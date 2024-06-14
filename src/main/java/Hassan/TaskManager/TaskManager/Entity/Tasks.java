@@ -3,6 +3,7 @@ package Hassan.TaskManager.TaskManager.Entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,7 +13,7 @@ import lombok.Setter;
 public class Tasks {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private String Task;
-    private String description;
+    private Long id;
+    public String task;
+    public String description;
 }
